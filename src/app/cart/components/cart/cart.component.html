@@ -1,0 +1,32 @@
+<mat-card class="wrapper">
+  <mat-card-header class="header">
+    <mat-card-title class="title">goods</mat-card-title>
+  </mat-card-header>
+    <mat-card-content *ngIf="isCartNotEmpty(); else emptyCart" class="content">
+      <mat-checkbox
+        class="checkbox checkbox-all"
+        color="primary"
+        [checked]="selectedAll"
+        (change)="toggleItems()">Select all
+      </mat-checkbox>
+    <mat-divider></mat-divider>
+    <app-cart-item
+      *ngFor="let product of goods"
+      [product]="product"
+      (increase)="onIncrease($event)"
+      (decrease)="onDecrease($event)"
+      (isSelected)="onChecked($event)">
+    </app-cart-item>
+
+    <div class="cart-button" [class.none]="!selectedAll">
+      <button mat-raised-button
+        color="accent"
+        (click)="removeAll()">Remove all
+      </button>
+    </div>
+  </mat-card-content>
+
+  <ng-template #emptyCart>
+    <p>Cart is empty</p>
+  </ng-template>
+</mat-card>

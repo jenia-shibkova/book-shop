@@ -1,0 +1,39 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 224px;
+  margin: 15px;
+}
+
+.book-item {
+  height: 100%;
+}
+
+.date,
+.price {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.not-available {
+  color: red;
+}
+
+.desc {
+  margin-bottom: 20px;
+}
+
+.button {
+  width: 100%;
+  align-self: self-end;
+}
+
+.button:hover {
+  cursor: pointer;
+}

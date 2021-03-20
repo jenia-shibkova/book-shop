@@ -1,0 +1,21 @@
+<mat-card class="book-item">
+  <img mat-card-image src="https://via.placeholder.com/224x224" alt="{{book.name}">
+  <mat-card-header class="header">
+    <mat-card-title class="title">{{ book.name }}</mat-card-title>
+    <mat-card-subtitle>{{ book.author }}</mat-card-subtitle>
+  </mat-card-header>
+  <p class="date">{{ book.createDate }}</p>
+  <p class="price">{{ book.price }}</p>
+  <p [class.not-available]="!book.isAvailable">{{ getAvailabilityTitle() }}</p>
+  <mat-card-content class="content">
+    <!-- {{ book.description }} -->
+    <p class="desc">description</p>
+    <button
+      *ngIf="book.isAvailable" mat-raised-button color="primary"
+      class="button"
+      (click)="onBuy()"
+    >Add to cart
+    </button>
+  </mat-card-content>
+</mat-card>
+

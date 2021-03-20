@@ -1,0 +1,21 @@
+<div class="row">
+  <mat-checkbox
+    [(ngModel)]="product.isSelected"
+    class="checkbox"
+    color="primary"
+    (change)="onChecked()"
+  ></mat-checkbox>
+  <div class="name">{{product.name}}</div>
+  <div class="quantity">{{product.quantity}}</div>
+  <div class="cost">{{product.subTotal}}</div>
+  <div class="controls">
+    <button mat-icon-button color="primary" (click)="onIncrease()">
+      <mat-icon>add</mat-icon>
+    </button>
+
+    <button mat-icon-button color="accent" (click)="onDecrease()">
+      <mat-icon>remove</mat-icon>
+    </button>
+  </div>
+</div>
+<mat-divider></mat-divider>

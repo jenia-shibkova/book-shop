@@ -1,0 +1,78 @@
+:host {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20px;
+  width: calc(100% - 20px);
+}
+
+.wrapper {
+  flex-direction: column;
+  flex-basis: 500px;
+  margin-top: 20px;
+}
+
+.header {
+  .title {
+    // font-size: xx-large;
+    font-size: large;
+  }
+
+  .sub-title {
+    margin-top: 10px;
+    font-size: large;
+  }
+}
+
+.content {
+  padding: 15px;
+}
+
+.table-title {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.table-footer {
+  width: 100%;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.table-controls {
+  width: 100%;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.name,
+.quantity,
+.cost {
+  margin: 0 10px;
+  flex-basis: 250px;
+  font-weight: bold;
+}
+
+.controls {
+  flex-basis: 200px;
+  display: flex;
+  flex-direction: row;
+}
+
+.checkbox-all {
+  margin-bottom: 15px;
+}
+
+.cart-button {
+  padding-top: 20px;
+}
+
+.none {
+  display: none;
+}

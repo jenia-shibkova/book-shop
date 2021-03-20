@@ -1,0 +1,35 @@
+:host {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  margin: 15px;
+  padding-top: 15px;
+}
+
+.name,
+.quantity,
+.cost {
+  margin: 0 10px;
+  flex-basis: 250px;
+}
+
+.checkbox {
+  margin: 0 10px;
+  flex-basis: 50px;
+}
+
+.controls {
+  flex-basis: 200px;
+  display: flex;
+  flex-direction: row;
+}
+
+.divider {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
